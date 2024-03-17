@@ -7,6 +7,8 @@ const container=document.querySelector(".container");
 const Form=document.querySelector(".Form");
 
 
+
+
 function search (e)
 {
 
@@ -20,6 +22,7 @@ fetch(`https://api.unsplash.com/search/photos?query=${value}`,{
     headers :{
     Authorization: "Client-ID //Kendinize ait tokeninizi ekleyin 
     }
+   
     })
 
 
@@ -39,6 +42,7 @@ Array.from(data.results).forEach((image)=>{
 resimleriekle(image.urls.small);
 
 })
+   
 })
 
 
@@ -65,6 +69,8 @@ const Temizle= () =>
 {
     imagecontainer="";
 }
+
+
 
 searchbutton.addEventListener("click",search);
 Temizlebutton.addEventListener("click",Temizle);
