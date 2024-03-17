@@ -9,6 +9,8 @@ const Form=document.querySelector(".Form");
 
 
 
+
+
 function search (e)
 {
 
@@ -31,6 +33,7 @@ fetch(`https://api.unsplash.com/search/photos?query=${value}`,{
 
   
 .then((res)=>res.json())
+   
 .then((data)=>{
 
 
@@ -59,15 +62,21 @@ const resimleriekle= (url) =>
 {
 
     let img= document.createElement("img");
+   
     img.classList.add("img");
+   
     img.src=url;
 
     imagecontainer.appendChild(img);
 }
 
+
+
 const Temizle= () =>
 {
+   
     imagecontainer="";
+   
 }
 
 
