@@ -17,7 +17,7 @@ function search (e)
 e.preventDefault(); 
    
 const value= imgsearch.value.trim(); 
-fetch(`https://api.unsplash.com/search/photos?query=${value}`,{ 
+fetch(`{value}`,{  // Bu alana web sitesinden alınan url eklenecek
 
 
     method:"GET", 
